@@ -11,7 +11,8 @@ import {
     Avatar,
     TableSortLabel
   } from "@material-ui/core";
-  
+  import Drawer from './CreateCustomerDrawer';
+
   const columns = [
     { id: "startDate", label: "Start Date" },
     { id: "endDate", label: "End Date" },
@@ -26,11 +27,27 @@ import {
   ];
   
 
-export default function tableGen({dataLength, displayedData, changePage, sortOrderChange, page, sortOrder, dispatch, setActiveRowHover, activeRowHover}){
+export default function tableGen({
+    dataLength,
+    displayedData, 
+    changePage,
+    sortOrderChange, 
+    page,
+    sortOrder, 
+    dispatch,
+    setActiveRowHover, 
+    activeRowHover, 
+    onOpenDrawer,
+    openDrawer,
+    onCloseDrawer
+}){
+
 
     const handleRowHover = (customer) => {
         dispatch(setActiveRowHover(customer));
     };
+
+
     return <div>
         <TableContainer component={Paper}>
         <Table>
@@ -68,7 +85,7 @@ export default function tableGen({dataLength, displayedData, changePage, sortOrd
                 <TableCell>
                 <Avatar alt={row.customer} src={row.director} />
                 </TableCell>
-                {activeRowHover === row.customer && <Button sx={{backgroundColor: 'blue', color: 'white', marginTop: '15px'}} varient={'contained'} onClick={() => console.log('create')}>Create Insight</Button>}
+                {activeRowHover === row.customer && <Button sx={{backgroundColor: 'blue', color: 'white', marginTop: '15px'}} varient={'contained'} onClick={() => dispatch(onOpenDrawer())}>Create Insight</Button>}
             </TableRow>
             ))}
         </TableBody>
@@ -83,5 +100,6 @@ export default function tableGen({dataLength, displayedData, changePage, sortOrd
                 dispatch(changePage(page))
             }}
         />
+        <Drawer open={openDrawer} onClose={() => dispatch(onCloseDrawer())} row={activeRowHover}/>
   </div>
 }
