@@ -1,47 +1,51 @@
 [
     {
-      "startDate": "2022-04-15",
-      "endDate": "2022-06-10",
-      "customer": "ABC Company",
+      "startDate": "2023-04-15",
+      "endDate": "2023-06-10",
+      "customer": "1223ABC Company",
       "impression": 6723,
       "conversion": 48,
       "attributeMatches": 347,
       "conversionRate": 7,
       "avgTimeToConversion": 17,
-      "director": "https://example.com/directors/1.jpg"
+      "director": "https://example.com/directors/1.jpg",
+      "avgFrequency": "4521346"
     },
     {
-      "startDate": "2022-02-12",
-      "endDate": "2022-05-30",
-      "customer": "XYZ Corporation",
+      "startDate": "2023-02-12",
+      "endDate": "2023-05-30",
+      "customer": "1223XYZ Corporation",
       "impression": 4819,
       "conversion": 58,
       "attributeMatches": 280,
       "conversionRate": 12,
       "avgTimeToConversion": 24,
-      "director": "https://example.com/directors/2.jpg"
+      "director": "https://example.com/directors/2.jpg",
+      "avgFrequency": "14587435"
     },
     {
-      "startDate": "2022-07-02",
-      "endDate": "2022-09-25",
-      "customer": "123 Industries",
+      "startDate": "2023-07-02",
+      "endDate": "2023-09-25",
+      "customer": "1223123 Industries",
       "impression": 8734,
       "conversion": 39,
       "attributeMatches": 195,
       "conversionRate": 4,
       "avgTimeToConversion": 10,
-      "director": "https://example.com/directors/3.jpg"
+      "director": "https://example.com/directors/3.jpg",
+      "avgFrequency": "3131"
     },
     {
       "startDate": "2022-08-20",
       "endDate": "2022-12-05",
-      "customer": "Acme Corp",
+      "customer": "1223Acme Corp",
       "impression": 5248,
       "conversion": 23,
       "attributeMatches": 123,
       "conversionRate": 4,
       "avgTimeToConversion": 13,
-      "director": "https://example.com/directors/4.jpg"
+      "director": "https://example.com/directors/4.jpg",
+      "avgFrequency": "12123"
     },
     {
       "startDate": "2022-01-05",
@@ -52,7 +56,8 @@
       "attributeMatches": 176,
       "conversionRate": 9,
       "avgTimeToConversion": 6,
-      "director": "https://example.com/directors/5.jpg"
+      "director": "https://example.com/directors/5.jpg",
+      "avgFrequency": "12113456"
     },
     {
       "startDate": "2022-09-28",
@@ -63,7 +68,8 @@
       "attributeMatches": 402,
       "conversionRate": 9,
       "avgTimeToConversion": 14,
-      "director": "https://example.com/directors/6.jpg"
+      "director": "https://example.com/directors/6.jpg",
+      "avgFrequency": "123756"
     },
     {
       "startDate": "2022-03-17",
@@ -74,7 +80,8 @@
       "attributeMatches": 256,
       "conversionRate": 9,
       "avgTimeToConversion": 12,
-      "director": "https://example.com/directors/7.jpg"
+      "director": "https://example.com/directors/7.jpg",
+      "avgFrequency": "46789"
     },
     {
       "startDate": "2022-11-10",
@@ -85,7 +92,8 @@
       "attributeMatches": 98,
       "conversionRate": 3,
       "avgTimeToConversion": 9,
-      "director": "https://example.com/directors/8.jpg"
+      "director": "https://example.com/directors/8.jpg",
+      "avgFrequency": "123456"
     },
     {
       "startDate": "2022-05-22",
@@ -96,7 +104,8 @@
       "attributeMatches": 305,
       "conversionRate": 10,
       "avgTimeToConversion": 19,
-      "director": "https://example.com/directors/9.jpg"
+      "director": "https://example.com/directors/9.jpg",
+      "avgFrequency": "467896"
     },
     {
       "startDate": "2022-06-05",
@@ -107,7 +116,8 @@
       "attributeMatches": 243,
       "conversionRate": 5,
       "avgTimeToConversion": 16,
-      "director": "https://example.com/directors/10.jpg"
+      "director": "https://example.com/directors/10.jpg",
+      "avgFrequency": "123456"
     },
     {
       "startDate": "2022-09-10",
@@ -118,7 +128,8 @@
       "attributeMatches": 120,
       "conversionRate": 3,
       "avgTimeToConversion": 11,
-      "director": "https://example.com/directors/11.jpg"
+      "director": "https://example.com/directors/11.jpg",
+      "avgFrequency": "797"
     },
     {
       "startDate": "2022-04-30",
@@ -129,7 +140,8 @@
       "attributeMatches": 177,
       "conversionRate": 5,
       "avgTimeToConversion": 8,
-      "director": "https://example.com/directors/12.jpg"
+      "director": "https://example.com/directors/12.jpg",
+      "avgFrequency": "8484"
     },
     {
       "startDate": "2022-02-18",
@@ -140,7 +152,8 @@
       "attributeMatches": 126,
       "conversionRate": 5,
       "avgTimeToConversion": 11,
-      "director": "https://example.com/directors/13.jpg"
+      "director": "https://example.com/directors/13.jpg",
+      "avgFrequency": "6865"
     },
     {
       "startDate": "2022-10-12",
@@ -151,7 +164,8 @@
       "attributeMatches": 75,
       "conversionRate": 2,
       "avgTimeToConversion": 5,
-      "director": "https://example.com/directors/14.jpg"
+      "director": "https://example.com/directors/14.jpg",
+      "avgFrequency": "69745633"
     },
     {
       "startDate": "2022-03-20",
@@ -162,7 +176,8 @@
       "attributeMatches": 282,
       "conversionRate": 12,
       "avgTimeToConversion": 14,
-      "director": "https://example.com/directors/15.jpg"
+      "director": "https://example.com/directors/15.jpg",
+      "avgFrequency": "123343456"
     },
     {
       "startDate": "2022-11-08",
@@ -173,7 +188,8 @@
       "attributeMatches": 162,
       "conversionRate": 4,
       "avgTimeToConversion": 9,
-      "director": "https://example.com/directors/16.jpg"
+      "director": "https://example.com/directors/16.jpg",
+      "avgFrequency": "7896"
     },
     {
       "startDate": "2022-08-14",
@@ -184,7 +200,8 @@
       "attributeMatches": 124,
       "conversionRate": 3,
       "avgTimeToConversion": 12,
-      "director": "https://example.com/directors/17.jpg"
+      "director": "https://example.com/directors/17.jpg",
+      "avgFrequency": "794534"
     },
     {
       "startDate": "2022-06-30",
@@ -195,7 +212,8 @@
       "attributeMatches": 248,
       "conversionRate": 7,
       "avgTimeToConversion": 16,
-      "director": "https://example.com/directors/18.jpg"
+      "director": "https://example.com/directors/18.jpg",
+      "avgFrequency": "34536768"
     },
     {
       "startDate": "2022-04-02",
@@ -206,7 +224,8 @@
       "attributeMatches": 322,
       "conversionRate": 9,
       "avgTimeToConversion": 15,
-      "director": "https://example.com/directors/19.jpg"
+      "director": "https://example.com/directors/19.jpg",
+      "avgFrequency": "456123"
     },
     {
       "startDate": "2022-09-05",
@@ -217,6 +236,43 @@
       "attributeMatches": 80,
       "conversionRate": 2,
       "avgTimeToConversion": 7,
-      "director": "https://example.com/directors/20.jpg"
+      "director": "https://example.com/directors/20.jpg",
+      "avgFrequency": "456"
+    },
+    {
+      "startDate": "2023-09-05",
+      "endDate": "2023-12-20",
+      "customer": "Digital Solutions",
+      "impression": 5129,
+      "conversion": 15,
+      "attributeMatches": 80,
+      "conversionRate": 2,
+      "avgTimeToConversion": 7,
+      "director": "https://example.com/directors/20.jpg",
+      "avgFrequency": "4213486756"
+    },
+    {
+      "startDate": "2023-09-05",
+      "endDate": "2023-12-20",
+      "customer": "Digital Solutions",
+      "impression": 5129,
+      "conversion": 15,
+      "attributeMatches": 80,
+      "conversionRate": 2,
+      "avgTimeToConversion": 7,
+      "director": "https://example.com/directors/20.jpg",
+      "avgFrequency": "454566"
+    },
+    {
+      "startDate": "2023-09-05",
+      "endDate": "2023-12-20",
+      "customer": "Digital Solutions",
+      "impression": 5129,
+      "conversion": 15,
+      "attributeMatches": 80,
+      "conversionRate": 2,
+      "avgTimeToConversion": 7,
+      "director": "https://example.com/directors/20.jpg",
+      "avgFrequency": "454566"
     }
 ]

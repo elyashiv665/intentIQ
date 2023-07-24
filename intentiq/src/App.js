@@ -1,34 +1,14 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import data from './mockData.json';
+import React, { useMemo } from 'react';
 import tableGen from './Table';
+import { useSelector, useDispatch } from 'react-redux'
+import { sortOrderChange, changePage } from './tableStateManage'
 
 function App() {
-  const [page, setPage] = useState(0);
-  const [tableData, setTableData] = useState(data);
-  const [displayedData, setDisplayedData] = useState([]);
-  const [sortOrder, setSortOrder] = React.useState("asc");
-  const rowsPerPage = 10;
-
-  useEffect(() => {
-    const sorted = tableData.sort((a, b) => {
-      if (sortOrder === "asc") {
-        return new Date(a.startDate) - new Date(b.startDate);
-      } else {
-        return new Date(b.startDate) - new Date(a.startDate);
-      }});
-    setDisplayedData( sorted.slice(page * rowsPerPage, (page + 1) * rowsPerPage));
-  }, [tableData, page, sortOrder]);
-  
-  const handleSortOrderChange = () => {
-    setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
-  };
-
-  const handleChangePage = (event, newPage) => {
-     setPage(newPage);
-  };
-
+  const {page, displayedData, sortOrder, data} = useSelector(state => (state.state));
+  const dispatch = useDispatch()
+  console.log(page)
   const table = useMemo(() =>(
-    tableGen({displayedData, handleChangePage, handleSortOrderChange, page, sortOrder, data, rowsPerPage})
+    tableGen({dataLength: data.length, displayedData, changePage, sortOrderChange, page, sortOrder, dispatch})
   ), [displayedData])
 
   return (

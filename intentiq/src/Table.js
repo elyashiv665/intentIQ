@@ -25,7 +25,7 @@ import {
   ];
   
 
-export default function tableGen({displayedData, handleChangePage, handleSortOrderChange, page, sortOrder, data, rowsPerPage}){
+export default function tableGen({dataLength, displayedData, changePage, sortOrderChange, page, sortOrder, dispatch}){
     return <div>
         <TableContainer component={Paper}>
         <Table>
@@ -37,7 +37,7 @@ export default function tableGen({displayedData, handleChangePage, handleSortOrd
                     <TableSortLabel
                         active={true}
                         direction={sortOrder}
-                        onClick={handleSortOrderChange}
+                        onClick={() => dispatch(sortOrderChange())}
                     >
                         {column.label}
                     </TableSortLabel>
@@ -69,12 +69,13 @@ export default function tableGen({displayedData, handleChangePage, handleSortOrd
         </Table>
         </TableContainer>
         <TablePagination
-        component="div"
-        rowsPerPageOptions={[]}
-        count={data.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onChangePage={handleChangePage}
+            component="div"
+            count={dataLength}
+            rowsPerPage={parseInt(process.env.REACT_APP_PER_PAGE)}
+            page={page}
+            onPageChange={(e, page) =>{
+                dispatch(changePage(page))
+            }}
         />
   </div>
 }
