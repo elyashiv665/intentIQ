@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import {
     Table,
     TableBody,
@@ -25,8 +26,11 @@ import {
   ];
   
 
-export default function tableGen({dataLength, displayedData, changePage, sortOrderChange, page, sortOrder, dispatch}){
-    console.log('displayedData', displayedData)
+export default function tableGen({dataLength, displayedData, changePage, sortOrderChange, page, sortOrder, dispatch, setActiveRowHover, activeRowHover}){
+
+    const handleRowHover = (customer) => {
+        dispatch(setActiveRowHover(customer));
+    };
     return <div>
         <TableContainer component={Paper}>
         <Table>
@@ -51,7 +55,7 @@ export default function tableGen({dataLength, displayedData, changePage, sortOrd
         </TableHead>
         <TableBody>
             {displayedData.map((row) => (
-            <TableRow key={row.customer}>
+             <TableRow key={row.customer} onMouseEnter={() => handleRowHover(row.customer)}>
                 <TableCell>{row.startDate}</TableCell>
                 <TableCell>{row.endDate}</TableCell>
                 <TableCell>{row.customer}</TableCell>
@@ -64,6 +68,7 @@ export default function tableGen({dataLength, displayedData, changePage, sortOrd
                 <TableCell>
                 <Avatar alt={row.customer} src={row.director} />
                 </TableCell>
+                {activeRowHover === row.customer && <Button sx={{backgroundColor: 'blue', color: 'white', marginTop: '15px'}} varient={'contained'} onClick={() => console.log('create')}>Create Insight</Button>}
             </TableRow>
             ))}
         </TableBody>

@@ -24,7 +24,9 @@ export const tableStateManage = createSlice({
     page:0,
     displayedData : data.slice(0, 10),
     data,
-    sortOrder : 'asc'
+    sortOrder : 'asc',
+    activeRowHover: undefined
+
   },
   reducers: {
     sortOrderChange: (state) => {
@@ -34,13 +36,16 @@ export const tableStateManage = createSlice({
     },
 
     changePage: (state, page) => {
-      console.log('new page', page.payload)
       state.page = page.payload;
       state.displayedData = calculatePage(state);
+    },
+
+    setActiveRowHover: (state, customer) => {
+      state.activeRowHover = customer.payload;
     }
   }
 })
 
-export const { sortOrderChange, changePage } = tableStateManage.actions
+export const { sortOrderChange, changePage, setActiveRowHover } = tableStateManage.actions
 
 export default tableStateManage.reducer
