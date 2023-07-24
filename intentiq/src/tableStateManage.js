@@ -4,14 +4,18 @@ import data from './mockData.json';
 const PER_PAGE = parseInt(process.env.REACT_APP_PER_PAGE);
 
 const calculatePage = (state) => {
-    state.sortOrder = state.sortOrder === "asc" ? "desc" : "asc";
-    const sorted = state.data.sort((a, b) => {
-      if (state.sortOrder === "asc") {
-        return new Date(a.startDate) - new Date(b.startDate);
-      } else {
-        return new Date(b.startDate) - new Date(a.startDate);
-      }});
-    return sorted.slice(state.page * PER_PAGE, (state.page + 1) * PER_PAGE);
+    return state.data.slice(state.page * PER_PAGE, (state.page + 1) * PER_PAGE);
+};
+const calculateSort = (state) => {
+  const sorted = state.data.sort((a, b) => {
+    if (state.sortOrder === "asc") {
+      return new Date(a.startDate) - new Date(b.startDate);
+    } else if(state.sortOrder === 'desc') {
+      return new Date(b.startDate) - new Date(a.startDate);
+    }else{
+      return true
+    }});
+  return sorted;
 };
 
 export const tableStateManage = createSlice({
@@ -24,6 +28,8 @@ export const tableStateManage = createSlice({
   },
   reducers: {
     sortOrderChange: (state) => {
+      state.sortOrder = state.sortOrder === "asc" ? "desc" : "asc";
+      state.data = calculateSort(state);
       state.displayedData = calculatePage(state);
     },
 

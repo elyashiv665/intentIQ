@@ -26,6 +26,7 @@ import {
   
 
 export default function tableGen({dataLength, displayedData, changePage, sortOrderChange, page, sortOrder, dispatch}){
+    console.log('displayedData', displayedData)
     return <div>
         <TableContainer component={Paper}>
         <Table>
