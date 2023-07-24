@@ -1,0 +1,222 @@
+[
+    {
+      "startDate": "2022-04-15",
+      "endDate": "2022-06-10",
+      "customer": "ABC Company",
+      "impression": 6723,
+      "conversion": 48,
+      "attributeMatches": 347,
+      "conversionRate": 7,
+      "avgTimeToConversion": 17,
+      "director": "https://example.com/directors/1.jpg"
+    },
+    {
+      "startDate": "2022-02-12",
+      "endDate": "2022-05-30",
+      "customer": "XYZ Corporation",
+      "impression": 4819,
+      "conversion": 58,
+      "attributeMatches": 280,
+      "conversionRate": 12,
+      "avgTimeToConversion": 24,
+      "director": "https://example.com/directors/2.jpg"
+    },
+    {
+      "startDate": "2022-07-02",
+      "endDate": "2022-09-25",
+      "customer": "123 Industries",
+      "impression": 8734,
+      "conversion": 39,
+      "attributeMatches": 195,
+      "conversionRate": 4,
+      "avgTimeToConversion": 10,
+      "director": "https://example.com/directors/3.jpg"
+    },
+    {
+      "startDate": "2022-08-20",
+      "endDate": "2022-12-05",
+      "customer": "Acme Corp",
+      "impression": 5248,
+      "conversion": 23,
+      "attributeMatches": 123,
+      "conversionRate": 4,
+      "avgTimeToConversion": 13,
+      "director": "https://example.com/directors/4.jpg"
+    },
+    {
+      "startDate": "2022-01-05",
+      "endDate": "2022-04-20",
+      "customer": "Best Products Ltd.",
+      "impression": 3201,
+      "conversion": 32,
+      "attributeMatches": 176,
+      "conversionRate": 9,
+      "avgTimeToConversion": 6,
+      "director": "https://example.com/directors/5.jpg"
+    },
+    {
+      "startDate": "2022-09-28",
+      "endDate": "2022-12-15",
+      "customer": "Superior Solutions",
+      "impression": 7615,
+      "conversion": 71,
+      "attributeMatches": 402,
+      "conversionRate": 9,
+      "avgTimeToConversion": 14,
+      "director": "https://example.com/directors/6.jpg"
+    },
+    {
+      "startDate": "2022-03-17",
+      "endDate": "2022-05-30",
+      "customer": "Global Services Inc.",
+      "impression": 5919,
+      "conversion": 54,
+      "attributeMatches": 256,
+      "conversionRate": 9,
+      "avgTimeToConversion": 12,
+      "director": "https://example.com/directors/7.jpg"
+    },
+    {
+      "startDate": "2022-11-10",
+      "endDate": "2022-12-31",
+      "customer": "Tech Innovators",
+      "impression": 4118,
+      "conversion": 16,
+      "attributeMatches": 98,
+      "conversionRate": 3,
+      "avgTimeToConversion": 9,
+      "director": "https://example.com/directors/8.jpg"
+    },
+    {
+      "startDate": "2022-05-22",
+      "endDate": "2022-08-10",
+      "customer": "Dynamic Solutions",
+      "impression": 6782,
+      "conversion": 68,
+      "attributeMatches": 305,
+      "conversionRate": 10,
+      "avgTimeToConversion": 19,
+      "director": "https://example.com/directors/9.jpg"
+    },
+    {
+      "startDate": "2022-06-05",
+      "endDate": "2022-08-20",
+      "customer": "Innovative Co.",
+      "impression": 7581,
+      "conversion": 43,
+      "attributeMatches": 243,
+      "conversionRate": 5,
+      "avgTimeToConversion": 16,
+      "director": "https://example.com/directors/10.jpg"
+    },
+    {
+      "startDate": "2022-09-10",
+      "endDate": "2022-12-10",
+      "customer": "Nexus Enterprises",
+      "impression": 5941,
+      "conversion": 19,
+      "attributeMatches": 120,
+      "conversionRate": 3,
+      "avgTimeToConversion": 11,
+      "director": "https://example.com/directors/11.jpg"
+    },
+    {
+      "startDate": "2022-04-30",
+      "endDate": "2022-08-05",
+      "customer": "Future Solutions",
+      "impression": 4981,
+      "conversion": 29,
+      "attributeMatches": 177,
+      "conversionRate": 5,
+      "avgTimeToConversion": 8,
+      "director": "https://example.com/directors/12.jpg"
+    },
+    {
+      "startDate": "2022-02-18",
+      "endDate": "2022-05-15",
+      "customer": "United Systems",
+      "impression": 3809,
+      "conversion": 21,
+      "attributeMatches": 126,
+      "conversionRate": 5,
+      "avgTimeToConversion": 11,
+      "director": "https://example.com/directors/13.jpg"
+    },
+    {
+      "startDate": "2022-10-12",
+      "endDate": "2022-12-31",
+      "customer": "Optimum Tech",
+      "impression": 4518,
+      "conversion": 13,
+      "attributeMatches": 75,
+      "conversionRate": 2,
+      "avgTimeToConversion": 5,
+      "director": "https://example.com/directors/14.jpg"
+    },
+    {
+      "startDate": "2022-03-20",
+      "endDate": "2022-06-15",
+      "customer": "First Class Corp",
+      "impression": 5189,
+      "conversion": 63,
+      "attributeMatches": 282,
+      "conversionRate": 12,
+      "avgTimeToConversion": 14,
+      "director": "https://example.com/directors/15.jpg"
+    },
+    {
+      "startDate": "2022-11-08",
+      "endDate": "2022-12-30",
+      "customer": "Tech Solutions Ltd.",
+      "impression": 6712,
+      "conversion": 31,
+      "attributeMatches": 162,
+      "conversionRate": 4,
+      "avgTimeToConversion": 9,
+      "director": "https://example.com/directors/16.jpg"
+    },
+    {
+      "startDate": "2022-08-14",
+      "endDate": "2022-11-10",
+      "customer": "Innovative Systems",
+      "impression": 7291,
+      "conversion": 27,
+      "attributeMatches": 124,
+      "conversionRate": 3,
+      "avgTimeToConversion": 12,
+      "director": "https://example.com/directors/17.jpg"
+    },
+    {
+      "startDate": "2022-06-30",
+      "endDate": "2022-09-20",
+      "customer": "Global Innovators",
+      "impression": 6219,
+      "conversion": 47,
+      "attributeMatches": 248,
+      "conversionRate": 7,
+      "avgTimeToConversion": 16,
+      "director": "https://example.com/directors/18.jpg"
+    },
+    {
+      "startDate": "2022-04-02",
+      "endDate": "2022-06-25",
+      "customer": "Tech Wizards",
+      "impression": 5638,
+      "conversion": 56,
+      "attributeMatches": 322,
+      "conversionRate": 9,
+      "avgTimeToConversion": 15,
+      "director": "https://example.com/directors/19.jpg"
+    },
+    {
+      "startDate": "2022-09-05",
+      "endDate": "2022-12-20",
+      "customer": "Digital Solutions",
+      "impression": 5129,
+      "conversion": 15,
+      "attributeMatches": 80,
+      "conversionRate": 2,
+      "avgTimeToConversion": 7,
+      "director": "https://example.com/directors/20.jpg"
+    }
+]
