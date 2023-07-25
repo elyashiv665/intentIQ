@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import tableStateManage from './tableStateManage'
+import stateManage from './stateManage'
 
 export default configureStore({
     reducer: {
-        state: tableStateManage
+        state: stateManage
     }
   })

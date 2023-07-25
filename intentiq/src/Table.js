@@ -1,4 +1,7 @@
 import Button from '@mui/material/Button';
+import { useSelector } from 'react-redux'
+import { sortOrderChange, changePage, setActiveRowHover , onOpenCreatDrawer} from './stateManage'
+
 import {
     Table,
     TableBody,
@@ -11,7 +14,7 @@ import {
     Avatar,
     TableSortLabel
   } from "@material-ui/core";
-  import Drawer from './CreateCustomerDrawer';
+  import CreateCustomerDrawer from './CreateCustomerDrawer';
 
   const columns = [
     { id: "startDate", label: "Start Date" },
@@ -27,21 +30,8 @@ import {
   ];
   
 
-export default function tableGen({
-    dataLength,
-    displayedData, 
-    changePage,
-    sortOrderChange, 
-    page,
-    sortOrder, 
-    dispatch,
-    setActiveRowHover, 
-    activeRowHover, 
-    onOpenDrawer,
-    openDrawer,
-    onCloseDrawer
-}){
-
+export default function TableGen(dispatch){
+    const {page, displayedData, sortOrder, data, activeRowHover} = useSelector(state => (state.state));
 
     const handleRowHover = (customer) => {
         dispatch(setActiveRowHover(customer));
@@ -85,7 +75,7 @@ export default function tableGen({
                 <TableCell>
                 <Avatar alt={row.customer} src={row.director} />
                 </TableCell>
-                {activeRowHover === row.customer && <Button sx={{backgroundColor: 'blue', color: 'white', marginTop: '15px'}} varient={'contained'} onClick={() => dispatch(onOpenDrawer())}>Create Insight</Button>}
+                {activeRowHover === row.customer && <Button sx={{backgroundColor: 'blue', color: 'white', marginTop: '15px'}} varient={'contained'} onClick={() => dispatch(onOpenCreatDrawer())}>Create Insight</Button>}
             </TableRow>
             ))}
         </TableBody>
@@ -93,13 +83,13 @@ export default function tableGen({
         </TableContainer>
         <TablePagination
             component="div"
-            count={dataLength}
+            count={data.length}
             rowsPerPage={parseInt(process.env.REACT_APP_PER_PAGE)}
             page={page}
             onPageChange={(e, page) =>{
                 dispatch(changePage(page))
             }}
         />
-        <Drawer open={openDrawer} onClose={() => dispatch(onCloseDrawer())} row={activeRowHover}/>
+        <CreateCustomerDrawer dispatch={dispatch}/>
   </div>
 }

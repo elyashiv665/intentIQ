@@ -18,7 +18,7 @@ const calculateSort = (state) => {
   return sorted;
 };
 
-export const tableStateManage = createSlice({
+export const stateManage = createSlice({
   name: 'state',
   initialState: {
     page:0,
@@ -26,7 +26,7 @@ export const tableStateManage = createSlice({
     data,
     sortOrder : 'asc',
     activeRowHover: undefined,
-    openDrawer: false
+    openCreatDrawer: false
   },
   reducers: {
     sortOrderChange: (state) => {
@@ -44,16 +44,15 @@ export const tableStateManage = createSlice({
       state.activeRowHover = customer.payload;
     },
 
-    onOpenDrawer: (state) =>{
-      state.openDrawer = true
+    onOpenCreatDrawer: (state) =>{
+      state.openCreatDrawer = true
     },
-    onCloseDrawer: (state) =>{
-      console.log('onCloseDrawer')
-      state.openDrawer = false
+    onCloseCreatDrawer: (state) =>{
+      state.openCreatDrawer = false
     }
   }
 })
 
-export const { sortOrderChange, changePage, setActiveRowHover, onOpenDrawer, onCloseDrawer } = tableStateManage.actions
+export const { sortOrderChange, changePage, setActiveRowHover, onOpenCreatDrawer, onCloseCreatDrawer } = stateManage.actions
 
-export default tableStateManage.reducer
+export default stateManage.reducer
