@@ -26,7 +26,8 @@ export const stateManage = createSlice({
     data,
     sortOrder : 'asc',
     activeRowHover: undefined,
-    openCreatDrawer: false
+    openCreatDrawer: false,
+    createActiveStep: 0
   },
   reducers: {
     sortOrderChange: (state) => {
@@ -49,10 +50,13 @@ export const stateManage = createSlice({
     },
     onCloseCreatDrawer: (state) =>{
       state.openCreatDrawer = false
+    },
+    setCreateActiveStep: (state, newStep) =>{
+      state.createActiveStep = newStep.payload;
     }
   }
 })
 
-export const { sortOrderChange, changePage, setActiveRowHover, onOpenCreatDrawer, onCloseCreatDrawer } = stateManage.actions
+export const { sortOrderChange, changePage, setActiveRowHover, onOpenCreatDrawer, onCloseCreatDrawer, setCreateActiveStep} = stateManage.actions
 
 export default stateManage.reducer

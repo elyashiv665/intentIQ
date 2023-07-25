@@ -1,13 +1,15 @@
 import Drawer from '@mui/material/Drawer';
 import {DialogTitle, IconButton} from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import Radio from '@mui/material/Radio';
+import {FormControlLabel, Radio} from '@mui/material';
 
 import { useSelector } from 'react-redux'
-import { onCloseCreatDrawer } from './stateManage'
+import { onCloseCreatDrawer, setCreateActiveStep } from './stateManage'
 
 
 function ColorRadioButtons(selectedValue, setSelectedValue) {
+  const steps = ['Details', 'Configuratins', 'Tags', 'Alerts'];
+
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
@@ -16,37 +18,34 @@ function ColorRadioButtons(selectedValue, setSelectedValue) {
     checked: selectedValue === item,
     onChange: handleChange,
     value: item,
-    name: 'color-radio-button-demo',
     inputProps: { 'aria-label': item },
   });
 
-  return (
-    <div>
-      <Radio {...controlProps('Details')} />
-      <Radio {...controlProps('Configuratins')}/>
-      <Radio {...controlProps('Tags')} />
-      <Radio {...controlProps('Alerts')} />
-    </div>
-  );
+  return <div>{steps.map(step => (
+          <FormControlLabel value={step} label={step} control={ <Radio {...controlProps(step)} />} />
+      ))}</div>;
 }
 export default function CreateCustomerDrawer({dispatch}){
-const { activeRowHover, openCreatDrawer} = useSelector(state => (state.state));
+
+const { activeRowHover, openCreatDrawer, createActiveStep} = useSelector(state => (state.state));
 
     return   <Drawer
     anchor={'right'}
     open={openCreatDrawer}
-    onClose={dispatch(onCloseCreatDrawer)}
+    onClose={() => dispatch(onCloseCreatDrawer)}
     PaperProps={{
       sx: { width: "30%" },
     }}
   >
     <DialogTitle>
-      <IconButton onClick={dispatch(onCloseCreatDrawer)}>
+      <IconButton onClick={() => dispatch(onCloseCreatDrawer)}>
           <ArrowBackIosIcon /> back
       </IconButton>
       <div style={{paddingLeft: 32, marginTop: 32}}>
         Create New Customer
-        
+        <div style={{marginTop: 16}}>
+          {ColorRadioButtons(createActiveStep, (data) => dispatch(setCreateActiveStep(data)))}
+        </div>
       </div>
     </DialogTitle>
       
