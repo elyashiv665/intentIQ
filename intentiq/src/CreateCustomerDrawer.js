@@ -1,10 +1,10 @@
 import Drawer from '@mui/material/Drawer';
 import {DialogTitle, IconButton} from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import {FormControlLabel, Radio} from '@mui/material';
+import {FormControlLabel, Radio, FormControl, TextField} from '@mui/material';
 
 import { useSelector } from 'react-redux'
-import { onCloseCreatDrawer, setCreateActiveStep } from './stateManage'
+import { onCloseCreatDrawer, setCreateActiveStep, setCreateActiveField } from './stateManage'
 
 
 function ColorRadioButtons(selectedValue, setSelectedValue) {
@@ -25,10 +25,30 @@ function ColorRadioButtons(selectedValue, setSelectedValue) {
           <FormControlLabel value={step} label={step} control={ <Radio {...controlProps(step)} />} />
       ))}</div>;
 }
+
+function ActiveStepComponent(dispatch, createActiveFields) {
+
+  function InputField(field){
+    return <FormControl sx={{marginTop: '16px'}}>
+            <TextField
+                label={field.label}
+                value={field.value}
+                onChange={(e) => dispatch(setCreateActiveField({fieldId: field.id, value: e.target.value}))}
+                placeholder={field.value ??''}
+            />
+        </FormControl>
+  }
+
+  return <div style={{display: 'flex', flexDirection: 'column', marginTop: '32px'}}>
+    {createActiveFields.map(field => (InputField(field)))}
+    </div>;
+
+}
+
+
 export default function CreateCustomerDrawer({dispatch}){
 
-const { activeRowHover, openCreatDrawer, createActiveStep} = useSelector(state => (state.state));
-
+const { openCreatDrawer, createActiveStep, createActiveFields} = useSelector(state => (state.state));
     return   <Drawer
     anchor={'right'}
     open={openCreatDrawer}
@@ -45,6 +65,7 @@ const { activeRowHover, openCreatDrawer, createActiveStep} = useSelector(state =
         Create New Customer
         <div style={{marginTop: 16}}>
           {ColorRadioButtons(createActiveStep, (data) => dispatch(setCreateActiveStep(data)))}
+          {ActiveStepComponent(dispatch, createActiveFields)}
         </div>
       </div>
     </DialogTitle>

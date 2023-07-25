@@ -18,6 +18,65 @@ const calculateSort = (state) => {
   return sorted;
 };
 
+// const fieldsIds = ['Details', 'Configuratins', 'Tags', 'Alerts'];
+
+const fieldsPerStep = {
+  'Details': [{
+     id: 'startDate',
+     label: 'Start Date',
+     value: undefined
+    },{
+      id: 'endDate',
+      label: 'End Date',
+      value: undefined
+
+     },{
+      id: 'customer',
+      label: 'Customer',
+      value: undefined
+
+     },{
+      id: 'director',
+      label: 'Director',
+      value: undefined
+
+     }],
+  'Configuratins': [{
+      id: 'impression',
+      label: 'Impression',
+      value: undefined
+
+    },{
+      id: 'conversion',
+      label: 'Conversion',
+      value: undefined
+
+    },{
+      id: 'attributeMatches',
+      label: 'Attribute Matches',
+      value: undefined
+
+    }],
+  'Tags': [],
+  'Alerts': [{
+    id: 'conversionRate',
+    label: 'Conversion Rate',
+    value: undefined
+
+  },{
+    id: 'avgTimeToConversion',
+    label: 'avg. Time To Conversion',
+    value: undefined
+
+  },{
+    id: 'avgFrequency',
+    label: 'avg. Frequency',
+    value: undefined
+
+  }]
+
+}
+
 export const stateManage = createSlice({
   name: 'state',
   initialState: {
@@ -27,7 +86,8 @@ export const stateManage = createSlice({
     sortOrder : 'asc',
     activeRowHover: undefined,
     openCreatDrawer: false,
-    createActiveStep: 0
+    createActiveStep: 'Details',
+    createActiveFields: fieldsPerStep['Details']
   },
   reducers: {
     sortOrderChange: (state) => {
@@ -52,11 +112,23 @@ export const stateManage = createSlice({
       state.openCreatDrawer = false
     },
     setCreateActiveStep: (state, newStep) =>{
+      console.log(newStep.payload);
       state.createActiveStep = newStep.payload;
+      state.createActiveFields = fieldsPerStep[newStep.payload];
+    },
+    setCreateActiveField: (state, data) =>{
+
+      const {fieldId, value} = data.payload;
+      console.log('fieldId', fieldId)
+      console.log('value', value)
+
+
+      state.createActiveFields.find(field => field.id===fieldId).value = value.payload;
+      state.createActiveFields = state.createActiveFields.map(x=>x);
     }
   }
 })
 
-export const { sortOrderChange, changePage, setActiveRowHover, onOpenCreatDrawer, onCloseCreatDrawer, setCreateActiveStep} = stateManage.actions
+export const { sortOrderChange, changePage, setActiveRowHover, onOpenCreatDrawer, onCloseCreatDrawer, setCreateActiveStep, setCreateActiveField} = stateManage.actions
 
 export default stateManage.reducer
