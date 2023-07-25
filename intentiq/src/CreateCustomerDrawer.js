@@ -1,10 +1,10 @@
 import Drawer from '@mui/material/Drawer';
 import {DialogTitle, IconButton} from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import {FormControlLabel, Radio, FormControl, TextField} from '@mui/material';
+import {FormControlLabel, Radio, FormControl, TextField, Button} from '@mui/material';
 
 import { useSelector } from 'react-redux'
-import { onCloseCreatDrawer, setCreateActiveStep, setCreateActiveField } from './stateManage'
+import { onCloseCreatDrawer, setCreateActiveStep, setCreateActiveField, createNewCostumer } from './stateManage'
 
 
 function ColorRadioButtons(selectedValue, setSelectedValue) {
@@ -26,7 +26,7 @@ function ColorRadioButtons(selectedValue, setSelectedValue) {
       ))}</div>;
 }
 
-function ActiveStepComponent(dispatch, createActiveFields) {
+function ActiveStepComponent(dispatch, fieldsPerStep, createActiveStep) {
 
   function InputField(field){
     return <FormControl sx={{marginTop: '16px'}}>
@@ -40,7 +40,7 @@ function ActiveStepComponent(dispatch, createActiveFields) {
   }
 
   return <div style={{display: 'flex', flexDirection: 'column', marginTop: '32px'}}>
-    {createActiveFields.map(field => (InputField(field)))}
+    {fieldsPerStep[createActiveStep].map(field => (InputField(field)))}
     </div>;
 
 }
@@ -48,8 +48,10 @@ function ActiveStepComponent(dispatch, createActiveFields) {
 
 export default function CreateCustomerDrawer({dispatch}){
 
-const { openCreatDrawer, createActiveStep, createActiveFields} = useSelector(state => (state.state));
-    return   <Drawer
+const { openCreatDrawer, createActiveStep, fieldsPerStep} = useSelector(state => (state.state));
+
+console.log('fieldsPerStep', JSON.parse(fieldsPerStep))
+return   <Drawer
     anchor={'right'}
     open={openCreatDrawer}
     onClose={() => dispatch(onCloseCreatDrawer)}
@@ -63,12 +65,20 @@ const { openCreatDrawer, createActiveStep, createActiveFields} = useSelector(sta
       </IconButton>
       <div style={{paddingLeft: 32, marginTop: 32}}>
         Create New Customer
-        <div style={{marginTop: 16}}>
-          {ColorRadioButtons(createActiveStep, (data) => dispatch(setCreateActiveStep(data)))}
-          {ActiveStepComponent(dispatch, createActiveFields)}
-        </div>
       </div>
-    </DialogTitle>
       
+    </DialogTitle>
+    <div style={{marginLeft: 32, display: 'flex', flexDirection: 'column'}}>
+      <div style={{marginTop: 16, paddingRight: 32}}>
+          {ColorRadioButtons(createActiveStep, (data) => dispatch(setCreateActiveStep(data)))}
+          {ActiveStepComponent(dispatch, JSON.parse(fieldsPerStep), createActiveStep)}
+      </div>
+        <Button 
+          sx={{ backgroundColor: 'blue', color: 'white !important', marginTop: '32px', alignSelf: 'center'}} 
+          varient={'contained'} 
+          onClick={() => dispatch(createNewCostumer())}>
+            Create New Costumer
+        </Button>
+    </div>
   </Drawer>
 }

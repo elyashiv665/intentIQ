@@ -18,60 +18,58 @@ const calculateSort = (state) => {
   return sorted;
 };
 
-// const fieldsIds = ['Details', 'Configuratins', 'Tags', 'Alerts'];
-
 const fieldsPerStep = {
   'Details': [{
      id: 'startDate',
      label: 'Start Date',
-     value: undefined
+     value: ''
     },{
       id: 'endDate',
       label: 'End Date',
-      value: undefined
+      value: ''
 
      },{
       id: 'customer',
       label: 'Customer',
-      value: undefined
+      value: ''
 
      },{
       id: 'director',
       label: 'Director',
-      value: undefined
+      value: -1
 
      }],
   'Configuratins': [{
       id: 'impression',
       label: 'Impression',
-      value: undefined
+      value: -1
 
     },{
       id: 'conversion',
       label: 'Conversion',
-      value: undefined
+      value: -1
 
     },{
       id: 'attributeMatches',
       label: 'Attribute Matches',
-      value: undefined
+      value: -1
 
     }],
   'Tags': [],
   'Alerts': [{
     id: 'conversionRate',
     label: 'Conversion Rate',
-    value: undefined
+    value: -1
 
   },{
     id: 'avgTimeToConversion',
     label: 'avg. Time To Conversion',
-    value: undefined
+    value: -1
 
   },{
     id: 'avgFrequency',
     label: 'avg. Frequency',
-    value: undefined
+    value: -1
 
   }]
 
@@ -87,7 +85,7 @@ export const stateManage = createSlice({
     activeRowHover: undefined,
     openCreatDrawer: false,
     createActiveStep: 'Details',
-    createActiveFields: fieldsPerStep['Details']
+    fieldsPerStep:  JSON.stringify(fieldsPerStep)
   },
   reducers: {
     sortOrderChange: (state) => {
@@ -112,23 +110,20 @@ export const stateManage = createSlice({
       state.openCreatDrawer = false
     },
     setCreateActiveStep: (state, newStep) =>{
-      console.log(newStep.payload);
       state.createActiveStep = newStep.payload;
-      state.createActiveFields = fieldsPerStep[newStep.payload];
     },
     setCreateActiveField: (state, data) =>{
-
       const {fieldId, value} = data.payload;
-      console.log('fieldId', fieldId)
-      console.log('value', value)
-
-
-      state.createActiveFields.find(field => field.id===fieldId).value = value.payload;
-      state.createActiveFields = state.createActiveFields.map(x=>x);
+      const updateJson =  JSON.parse(state.fieldsPerStep);
+      updateJson[state.createActiveStep].find(field => field.id === fieldId).value = value;
+      state.fieldsPerStep = JSON.stringify(updateJson);
+    },
+    createNewCostumer: (state, data) =>{
+      console.log('createNewCostumer', data.payload)
     }
   }
 })
 
-export const { sortOrderChange, changePage, setActiveRowHover, onOpenCreatDrawer, onCloseCreatDrawer, setCreateActiveStep, setCreateActiveField} = stateManage.actions
+export const { sortOrderChange, changePage, setActiveRowHover, onOpenCreatDrawer, onCloseCreatDrawer, setCreateActiveStep, setCreateActiveField, createNewCostumer} = stateManage.actions
 
 export default stateManage.reducer
