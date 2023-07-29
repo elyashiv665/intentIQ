@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 import { useSelector } from 'react-redux'
-import { sortOrderChange, changePage, setActiveRowHover , onOpenCreatDrawer} from './stateManage'
+import { sortOrderChange, changePage, setActiveRowHover , onOpenCreatDrawer, setFavoriteFilter} from './stateManage'
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 import {
     Table,
@@ -31,14 +32,25 @@ import {
   
 
 export default function TableGen(dispatch){
-    const {page, displayedData, sortOrder, data, activeRowHover} = useSelector(state => (state.state));
-
+    const {page, displayedData, sortOrder, activeRowHover, filteredData, filterFavorite} = useSelector(state => (state.state));
+    
     const handleRowHover = (customer) => {
         dispatch(setActiveRowHover(customer));
     };
 
 
+    const favoriteButtonsGroup = () =>{
+        return (
+            <ButtonGroup variant="outlined" aria-label="outlined button group">
+              <Button onClick={() => dispatch(setFavoriteFilter(false))} sx={{color: filterFavorite? 'blue':'white', backgroundColor: filterFavorite? '':'blue'}}>All</Button>
+              <Button onClick={() => dispatch(setFavoriteFilter(true))} sx={{color: filterFavorite? 'white':'blue', backgroundColor: filterFavorite? 'blue':''}}>Favorite</Button>
+            </ButtonGroup>
+        );
+      }
     return <div>
+        <div>
+            {favoriteButtonsGroup()}
+        </div>
         <TableContainer component={Paper}>
         <Table>
         <TableHead>
@@ -83,7 +95,7 @@ export default function TableGen(dispatch){
         </TableContainer>
         <TablePagination
             component="div"
-            count={data.length}
+            count={filteredData.length}
             rowsPerPage={parseInt(process.env.REACT_APP_PER_PAGE)}
             page={page}
             onPageChange={(e, page) =>{

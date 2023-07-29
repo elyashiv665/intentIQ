@@ -8,8 +8,9 @@
       "attributeMatches": 347,
       "conversionRate": 7,
       "avgTimeToConversion": 17,
-      "director": "https://example.com/directors/1.jpg",
-      "avgFrequency": "4521346"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "4521346",
+      "isFavorite": true
     },
     {
       "startDate": "2023-02-12",
@@ -20,8 +21,9 @@
       "attributeMatches": 280,
       "conversionRate": 12,
       "avgTimeToConversion": 24,
-      "director": "https://example.com/directors/2.jpg",
-      "avgFrequency": "14587435"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "14587435",
+      "isFavorite": false
     },
     {
       "startDate": "2023-07-02",
@@ -32,8 +34,9 @@
       "attributeMatches": 195,
       "conversionRate": 4,
       "avgTimeToConversion": 10,
-      "director": "https://example.com/directors/3.jpg",
-      "avgFrequency": "3131"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "3131",
+      "isFavorite": false
     },
     {
       "startDate": "2022-08-20",
@@ -44,8 +47,9 @@
       "attributeMatches": 123,
       "conversionRate": 4,
       "avgTimeToConversion": 13,
-      "director": "https://example.com/directors/4.jpg",
-      "avgFrequency": "12123"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "12123",
+      "isFavorite": false
     },
     {
       "startDate": "2022-01-05",
@@ -56,8 +60,9 @@
       "attributeMatches": 176,
       "conversionRate": 9,
       "avgTimeToConversion": 6,
-      "director": "https://example.com/directors/5.jpg",
-      "avgFrequency": "12113456"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "12113456",
+      "isFavorite": false
     },
     {
       "startDate": "2022-09-28",
@@ -68,8 +73,9 @@
       "attributeMatches": 402,
       "conversionRate": 9,
       "avgTimeToConversion": 14,
-      "director": "https://example.com/directors/6.jpg",
-      "avgFrequency": "123756"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "123756",
+      "isFavorite": false
     },
     {
       "startDate": "2022-03-17",
@@ -80,8 +86,9 @@
       "attributeMatches": 256,
       "conversionRate": 9,
       "avgTimeToConversion": 12,
-      "director": "https://example.com/directors/7.jpg",
-      "avgFrequency": "46789"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "46789",
+      "isFavorite": true
     },
     {
       "startDate": "2022-11-10",
@@ -92,8 +99,9 @@
       "attributeMatches": 98,
       "conversionRate": 3,
       "avgTimeToConversion": 9,
-      "director": "https://example.com/directors/8.jpg",
-      "avgFrequency": "123456"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "123456",
+      "isFavorite": true
     },
     {
       "startDate": "2022-05-22",
@@ -104,8 +112,9 @@
       "attributeMatches": 305,
       "conversionRate": 10,
       "avgTimeToConversion": 19,
-      "director": "https://example.com/directors/9.jpg",
-      "avgFrequency": "467896"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "467896",
+      "isFavorite": true
     },
     {
       "startDate": "2022-06-05",
@@ -116,8 +125,9 @@
       "attributeMatches": 243,
       "conversionRate": 5,
       "avgTimeToConversion": 16,
-      "director": "https://example.com/directors/10.jpg",
-      "avgFrequency": "123456"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "123456",
+      "isFavorite": true
     },
     {
       "startDate": "2022-09-10",
@@ -128,8 +138,9 @@
       "attributeMatches": 120,
       "conversionRate": 3,
       "avgTimeToConversion": 11,
-      "director": "https://example.com/directors/11.jpg",
-      "avgFrequency": "797"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "797",
+      "isFavorite": false
     },
     {
       "startDate": "2022-04-30",
@@ -140,8 +151,9 @@
       "attributeMatches": 177,
       "conversionRate": 5,
       "avgTimeToConversion": 8,
-      "director": "https://example.com/directors/12.jpg",
-      "avgFrequency": "8484"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "8484",
+      "isFavorite": false
     },
     {
       "startDate": "2022-02-18",
@@ -152,8 +164,9 @@
       "attributeMatches": 126,
       "conversionRate": 5,
       "avgTimeToConversion": 11,
-      "director": "https://example.com/directors/13.jpg",
-      "avgFrequency": "6865"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "6865",
+      "isFavorite": false
     },
     {
       "startDate": "2022-10-12",
@@ -164,8 +177,9 @@
       "attributeMatches": 75,
       "conversionRate": 2,
       "avgTimeToConversion": 5,
-      "director": "https://example.com/directors/14.jpg",
-      "avgFrequency": "69745633"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "69745633",
+      "isFavorite": false
     },
     {
       "startDate": "2022-03-20",
@@ -176,8 +190,9 @@
       "attributeMatches": 282,
       "conversionRate": 12,
       "avgTimeToConversion": 14,
-      "director": "https://example.com/directors/15.jpg",
-      "avgFrequency": "123343456"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "123343456",
+      "isFavorite": false
     },
     {
       "startDate": "2022-11-08",
@@ -188,8 +203,9 @@
       "attributeMatches": 162,
       "conversionRate": 4,
       "avgTimeToConversion": 9,
-      "director": "https://example.com/directors/16.jpg",
-      "avgFrequency": "7896"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "7896",
+      "isFavorite": false
     },
     {
       "startDate": "2022-08-14",
@@ -200,8 +216,9 @@
       "attributeMatches": 124,
       "conversionRate": 3,
       "avgTimeToConversion": 12,
-      "director": "https://example.com/directors/17.jpg",
-      "avgFrequency": "794534"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "794534",
+      "isFavorite": true
     },
     {
       "startDate": "2022-06-30",
@@ -212,8 +229,9 @@
       "attributeMatches": 248,
       "conversionRate": 7,
       "avgTimeToConversion": 16,
-      "director": "https://example.com/directors/18.jpg",
-      "avgFrequency": "34536768"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "34536768",
+      "isFavorite": false
     },
     {
       "startDate": "2022-04-02",
@@ -224,8 +242,9 @@
       "attributeMatches": 322,
       "conversionRate": 9,
       "avgTimeToConversion": 15,
-      "director": "https://example.com/directors/19.jpg",
-      "avgFrequency": "456123"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "456123",
+      "isFavorite": true
     },
     {
       "startDate": "2022-09-05",
@@ -236,8 +255,9 @@
       "attributeMatches": 80,
       "conversionRate": 2,
       "avgTimeToConversion": 7,
-      "director": "https://example.com/directors/20.jpg",
-      "avgFrequency": "456"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "456",
+      "isFavorite": true
     },
     {
       "startDate": "2023-09-05",
@@ -248,8 +268,9 @@
       "attributeMatches": 80,
       "conversionRate": 2,
       "avgTimeToConversion": 7,
-      "director": "https://example.com/directors/20.jpg",
-      "avgFrequency": "4213486756"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "4213486756",
+      "isFavorite": false
     },
     {
       "startDate": "2023-09-05",
@@ -260,8 +281,9 @@
       "attributeMatches": 80,
       "conversionRate": 2,
       "avgTimeToConversion": 7,
-      "director": "https://example.com/directors/20.jpg",
-      "avgFrequency": "454566"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "454566",
+      "isFavorite": false
     },
     {
       "startDate": "2023-09-05",
@@ -272,7 +294,8 @@
       "attributeMatches": 80,
       "conversionRate": 2,
       "avgTimeToConversion": 7,
-      "director": "https://example.com/directors/20.jpg",
-      "avgFrequency": "454566"
+      "director": "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY209_CR7,0,140,209_AL_.jpg",
+      "avgFrequency": "454566",
+      "isFavorite": true
     }
 ]

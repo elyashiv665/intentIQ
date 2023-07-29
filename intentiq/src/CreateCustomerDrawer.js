@@ -2,7 +2,7 @@ import Drawer from '@mui/material/Drawer';
 import {DialogTitle, IconButton} from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import {FormControlLabel, Radio, FormControl, TextField, Button} from '@mui/material';
-
+import Switch from '@mui/material/Switch';
 import { useSelector } from 'react-redux'
 import { onCloseCreatDrawer, setCreateActiveStep, setCreateActiveField, createNewCostumer } from './stateManage'
 
@@ -27,16 +27,19 @@ function ColorRadioButtons(selectedValue, setSelectedValue) {
 }
 
 function ActiveStepComponent(dispatch, fieldsPerStep, createActiveStep) {
-
   function InputField(field){
-    return <FormControl sx={{marginTop: '16px'}}>
-            <TextField
-                label={field.label}
-                value={field.value}
-                onChange={(e) => dispatch(setCreateActiveField({fieldId: field.id, value: e.target.value}))}
-                placeholder={field.value ??''}
-            />
-        </FormControl>
+        return field.type === 'bool' ?  
+        <FormControlLabel onChange={(e) => dispatch(setCreateActiveField({fieldId: field.id, value: !field.value}))} control={<Switch checked={field.value} />} label={field.label} />:
+        <FormControl sx={{marginTop: '16px'}}>
+          <TextField
+              label={field.label}
+              value={field.value}
+              type={field.type}
+              onChange={(e) => dispatch(setCreateActiveField({fieldId: field.id, value: e.target.value}))}
+              placeholder={field.value ??''}
+          />
+          </FormControl>;
+        
   }
 
   return <div style={{display: 'flex', flexDirection: 'column', marginTop: '32px'}}>
@@ -49,8 +52,6 @@ function ActiveStepComponent(dispatch, fieldsPerStep, createActiveStep) {
 export default function CreateCustomerDrawer({dispatch}){
 
 const { openCreatDrawer, createActiveStep, fieldsPerStep} = useSelector(state => (state.state));
-
-console.log('fieldsPerStep', JSON.parse(fieldsPerStep))
 return   <Drawer
     anchor={'right'}
     open={openCreatDrawer}
